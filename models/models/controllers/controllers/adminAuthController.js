@@ -1,3 +1,4 @@
+```javascript
 import jwt from 'jsonwebtoken';
 import Admin from '../models/Admin.js';
 import Student from '../models/Student.js';
@@ -90,3 +91,4 @@ export const deleteCompany = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
+```
