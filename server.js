@@ -1,11 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import connectDB from './db.js';
+import connectDB from './config/db.js';
 import { seedAdmin } from './models/Admin.js';
-import studentRoutes from './studentRoutes.js';
-import companyRoutes from './companyRoutes.js';
-import adminRoutes from './adminRoutes.js';
+import studentRoutes from './routes/studentRoutes.js';
+import companyRoutes from './routes/companyRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 
 dotenv.config();
 
