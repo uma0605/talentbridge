@@ -2,8 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './db.js';
-import { seedAdmin } from './Admin.js';
-
+import { seedAdmin } from './models/Admin.js';
 import studentRoutes from './studentRoutes.js';
 import companyRoutes from './companyRoutes.js';
 import adminRoutes from './adminRoutes.js';
@@ -23,7 +22,7 @@ app.use('/api/companies', companyRoutes);
 app.use('/api/admin', adminRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'TalentBridge API is running 🚀' });
+  res.json({ message: 'TalentBridge API is running' });
 });
 
 app.use((req, res) => {
